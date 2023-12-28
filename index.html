@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO List app</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>To Do List</h2>
+            <input type="text" placeholder="Write Here...." id="inputBx">
+            <ul id="list"></ul>
+            <button class="history-button" onclick="toggleHistory()">History</button>
+        </div>
+        <div id="historyModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Task History</h2>
+              <ul id="historyList"></ul>
+            </div>
+          </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

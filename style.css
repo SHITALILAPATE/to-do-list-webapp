@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dela+Gothic+One&family=Inter+Tight:ital,wght@1,900&family=Inter:wght@400;900&family=Kanit:ital,wght@0,300;0,400;1,300&family=Martel+Sans:wght@700&family=Poppins:ital,wght@0,100;0,300;0,400;0,600;1,100;1,200;1,500;1,600;1,900&family=Red+Rose:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2f363e;
+}
+.box{
+    position: relative;
+    width: 450px;
+    height: 550px;
+    border-radius: 30px;
+    background: #c2d3e7;
+    padding: 30px 50px;
+    box-shadow: 25px 25px 75px rgb(0, 0, 0, 0.25),
+    10px 10px 70px rgb(0, 0, 0, 0.25),
+    inset 5px 5px 10px rgb(0, 0, 0, 0.5),
+    inset 5px 5px 20px rgb(255, 255, 255, 0.2),
+    inset -5px -5px 15px rgb(0, 0, 0, 0.75);
+}
+
+h2{
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    color: #020000;
+    font-size: 1.75em;
+    margin-bottom: 10px;
+}
+
+#inputBx{
+    position: relative;
+    width: calc(100% - 40px);
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-size: 1em;
+    box-shadow: 5px 5px 7px rgb(0, 0, 0, 0.25),
+    inset 2px 2px 5px rgb(0, 0, 0, 0.5),
+    inset -3px -3px 5px rgb(0, 0, 0, 0.5);
+}
+
+.box li{
+    position: relative;
+    width: calc(100% - 40px);
+    display: flex;
+    align-items: center;
+    background: #1f83f2;
+    margin: 15px 0;
+    padding: 10px 10px 10px 45px;
+    min-height: 45px;
+    cursor: pointer;
+    border-radius: 22.5px;
+    color: #fff;
+    box-shadow:  5px 5px 7px rgb(0, 0, 0, 0.25), 
+    inset 2px 2px 5px rgb(0, 0, 0, 0.5),
+    inset -3px -3px 5px rgb(0, 0, 0, 0.5);
+}
+
+.box li i::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    transform: rotate(45deg);
+}
+
+.box li i::after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    transform: rotate( -45deg);
+}
+
+.box li i {
+    position: absolute;
+    right: -40px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(184, 22, 135);
+    border-radius: 50%;
+    box-shadow:  5px 5px 7px rgb(0, 0, 0, 0.25),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.25), 
+    inset -3px -3px 5px rgb(0, 0, 0, 0.5);
+}
+
+.box li::before{
+    content: '';
+    position:absolute;
+    left: 8px;
+    width: 30px;
+    height: 30px;
+    background: #3e444b ;
+    border-radius: 50%;
+}
+
+.box li.done{
+    background: rgb(0, 0, 0)
+}
+.box li.done:after{
+    content: '';
+    position: absolute;
+    left: 16px;
+    width: 12px;
+    height: 6px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(315deg);
+}
+
+.list{
+    position: relative;
+    margin-top: 20px;
+    height: 350px;
+    overflow: auto;
+    padding-right: 10px;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 15px rgba(163, 36, 146, 0.5);
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #fff;
+}
+.history-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #1f83f2;
+    color: #fff;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.show-modal {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+.history-button:hover {
+    background-color: #155a8a; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .box {
+        padding: 20px;
+    }
+}
+
+
+

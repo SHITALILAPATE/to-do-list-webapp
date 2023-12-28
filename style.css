@@ -203,11 +203,31 @@ h2{
         opacity: 1;
     }
 }
-@media only screen and (max-width: 768px) {
+/* Inside your existing media query or add a new one for smaller screens */
+@media only screen and (max-width: 480px) {
     .box {
-        padding: 20px;
+        width: 90%; /* Adjust the width for smaller screens */
+        padding: 15px; /* Adjust the padding for smaller screens */
+    }
+
+    #inputBx {
+        width: calc(100% - 20px); /* Adjust the input width for smaller screens */
+    }
+
+    .box li {
+        padding: 8px; /* Adjust the padding for smaller screens */
+        min-height: 35px; /* Adjust the minimum height for smaller screens */
+    }
+
+    .box li i {
+        right: -20px; /* Adjust the icon position for smaller screens */
+        width: 25px; /* Adjust the icon size for smaller screens */
+        height: 25px;
+    }
+
+    .history-button {
+        bottom: 10px; /* Adjust the button position for smaller screens */
+        right: 10px;
     }
 }
-
-
 
